@@ -1,0 +1,14 @@
+<div class = "bg-img">
+<div id = "front1">
+    <form [formGroup] = "updateForm">
+        Enter UserName:  <br><input type="text" formControlName = "UserName"><br>
+        Enter email: <br><input type="text" formControlName = "email"><br>
+        Enter phno: <br><input type="number" formControlName = "phno"><br>
+        Enter passWord:  <br><input type="text" formControlName= "password" id = "pass3"><br>
+        Confirm passWord: <br><input type = "text" formControlName = "Confirmpassword" id = "pass4"><br><br>
+        <button (click)="update()"class = "btn btn-success">Submit</button>
+      </form>
+    
+      <a href = "#" [routerLink] = "['/login']">Already have an Account?Login</a>
+    </div>
+  </div>

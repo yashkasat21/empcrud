@@ -1,8 +1,14 @@
-<form >
-    Enter User Name:  <input type="text"><br>
-    Enter passWord:  <input type="text"><br>
-    Confirm passWord: <input type = "text"><br>
-    <button>Register</button>
+<div class = "bg-img">
+<div id = "front1">
+<form [formGroup] = "registrationForm">
+    Enter UserName:  <br><input type="text" formControlName = "UserName"><br>
+    Enter email: <br><input type="text" formControlName = "email"><br>
+    Enter phno: <br><input type="number" formControlName = "phno"><br>
+    Enter passWord:  <br><input type="text" formControlName= "password"><br>
+    Confirm passWord: <br><input type = "text" formControlName = "Confirmpassword"><br><br>
+    <button (click)="register()" class = "btn btn-primary">Register</button>
   </form>
 
   <a href = "#" [routerLink] = "['/login']">Already have an Account?Login</a>
+</div>
+</div>

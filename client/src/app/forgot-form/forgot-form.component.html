@@ -1,0 +1,9 @@
+<div id = "forgot">
+<form [formGroup] = "forgotForm"> 
+   <h6> Enter account related userName:</h6> <br><input type="text" formControlName= "userName" ><br>
+    <h6>Enter account related phnumber:</h6> <br><input type="number" formControlName = "phno"><br>
+    <h6>Enter account related password:</h6> <br><input type="text" formControlName = "password" id = "pass1"><br>
+    <h6>Confirm Password:</h6> <br><input type="text" formControlName = "Confirmpassword" id = "pass2"><br>
+    <button id="a1" (click)="forgot()" >Submit</button> <a href = "#" [routerLink] = "['/login']">Remember password?</a>
+</form>
+</div>

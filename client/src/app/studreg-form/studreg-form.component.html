@@ -1,0 +1,15 @@
+<div class = "bg-img">
+<div id = "front1">
+    <form [formGroup] = "studRegForm">
+        Enter UserName:  <br><input type="text" formControlName = "UserName"><br>
+        Enter rollno: <br><input type="Number" formControlName = "rollno"><br>
+        Enter email: <br><input type="text" formControlName = "email"><br>
+        Enter phno: <br><input type="number" formControlName = "phno"><br>
+        Enter passWord:  <br><input type="text" formControlName= "password"><br>
+        Confirm passWord: <br><input type = "text" formControlName = "Confirmpassword"><br><br>
+        <button (click)="reg()" class = "btn btn-primary">Register</button>
+      </form>
+    
+      <a href = "#" [routerLink] = "['/display']">Already added Student?See Admin List</a>
+    </div>
+  </div>

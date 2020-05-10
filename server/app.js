@@ -5,8 +5,9 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const userRoutes = require('./api/routes/user');
+const studentRoutes = require('./api/routes/student');
 
-mongoose.connect("Your Database link goes here", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://yash_kasat:" + process.env.MONGO_ATLAS_PW +"@cluster0-41jij.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true });
 // to generate link watch video given in below link
 // https://youtu.be/WDrU305J1yw
 console.log('https://youtu.be/WDrU305J1yw');
@@ -33,6 +34,7 @@ app.use((req, res, next) => {
 
 // Routes which should handle requests
 app.use("/user", userRoutes);
+app.use("/student",studentRoutes);
 
 app.use((req, res, next) => {
   const error = new Error("Not found");
@@ -48,5 +50,6 @@ app.use((error, req, res, next) => {
     }
   });
 });
+
 
 module.exports = app;

@@ -1,7 +1,12 @@
-<form [formGroup]="loginForm">
-  Enter User Name: <input formControlName="userName" type="text"><br>
-  Enter passWord: <input formControlName= "passWord" type="text"><br>
-  <button (click)="login()">Login</button>
-  <a href = "#" [routerLink] = "['/registration']"> Sign-Up </a>
-
+<div class = "bg-img">
+<div id = "front1">
+<h3>Login Form</h3>
+<form [formGroup]="loginForm"><br><br>
+  <h6>Enter UserName :</h6> <input type="text" formControlName="userName" ><br>
+  <h6>Enter Password :</h6> <input type="password" formControlName="password"><br><br>
+  <button (click)="login()" class = "btn btn-success">Login</button>
+  <button [routerLink] = "['/registration']" class = "btn btn-info"> Sign-Up </button>
+  <button [routerLink] = "['/forgot']" class = "btn btn-danger">  Forgot </button>
 </form>
+</div>
+</div>
